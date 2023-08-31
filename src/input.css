@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Climate+Crisis&family=Jost:wght@100;200;300;400;500&family=Quicksand:wght@300;400;500;600;700&family=Rubik+Dirt&family=Rubik+Moonrocks&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .card {
+        @apply
+        w-full max-w-[300px] font-jost flex flex-col gap-2
+    }
+
+   .links::before {
+        @apply
+        content-[''] w-full h-[2px] bg-red-600 absolute bottom-0 rounded-md scale-x-0 
+        origin-right transition-transform duration-300 ease-in-out
+   }
+
+   .links:hover::before {
+        @apply
+        scale-x-100 origin-left
+   }
+
+   .nav-bar {
+     @apply
+     flex w-2/3 flex-col justify-center items-center fixed right-0 top-0 h-screen
+     backdrop-blur-md bg-black/70
+   }
+
+   .nav-list {
+     @apply
+      flex flex-col space-y-8
+   }
+
+}
